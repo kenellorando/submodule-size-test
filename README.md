@@ -69,9 +69,9 @@ $ du -h
 69K     .
 ```
 
-The .git size is not polluted on a fresh clone. Thus the repository size will not be huge for future cloners if large objects are stored in a submodule. For those that did have the submodule and do not want to destroy the entire repository and start over, the best solution would appear to be to `rm -rf .git/module/<module name>`.
+The .git size is not polluted on a fresh clone. Thus the repository size will not be huge for future cloners if large objects are stored in a submodule. For those that did have the submodule and do not want to destroy the entire repository and start over, the best solution would appear to be to `rm -rf .git/modules/<module name>`.
 
 ## Results
 1. What size do submodules of a repository start with before they are initially updated? - **Zero.**
-2. When a submodule is removed, does the history of that submodule balloon the size of the main repository? - **No, not for new cloners. Those that previously had the submodule installed can run `rm -rf .git/module/<module>` to remove it.**
+2. When a submodule is removed, does the history of that submodule balloon the size of the main repository? - **No, not for new cloners. Those that previously had the submodule installed can run `rm -rf .git/modules/<module>` to remove it.**
 
