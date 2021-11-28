@@ -48,7 +48,7 @@ $ du -h
 
 `deinit` seems to remove the content itself but `.git` is still large in size.
 
-At this point, I nuke the repo and reclone. This is to check whether future clones are ballooned in size after .
+At this point, I nuke the repo and reclone. This is to check whether future clones are ballooned in size after removal.
 
 ```
 $  git clone https://github.com/kenellorando/submodule-size-test.git
@@ -73,5 +73,5 @@ The .git size is not polluted on a fresh clone. Thus the repository size will no
 
 ## Results
 1. What size do submodules of a repository start with before they are initially updated? - **Zero.**
-2. When a submodule is removed, does the history of that submodule balloon the size of the main repository? - **No, not for new cloners. Those with the submodule there previously can `rm -rf .git/module/<module>` to remove it.**
+2. When a submodule is removed, does the history of that submodule balloon the size of the main repository? - **No, not for new cloners. Those that previously had the submodule installed can run `rm -rf .git/module/<module>` to remove it.**
 
